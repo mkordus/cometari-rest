@@ -37,40 +37,50 @@ public class User {
         return this.id;
     }
 
-	public void setFirstName(String firstName) {
+	public User setFirstName(String firstName) {
     	this.firstName = firstName;
+
+    	return this;
 	}
 
 	public String getFirstName() {    
 		return firstName;
 	}
 
-	public void setLastName(String lastName) {
+	public User setLastName(String lastName) {
     	this.lastName = lastName;
+
+    	return this;
 	}
 
 	public String getLastName() {    
 		return lastName;
 	}
 
-	public void setEmailAddress(String emailAddress) {
+	public User setEmailAddress(String emailAddress) {
     	this.emailAddress = emailAddress;
+
+    	return this;
 	}
 
 	public String getEmailAddress() {    
 		return emailAddress;
 	}
 
-	public void setIsActivated(Boolean isActivated) {
+	public User setActivated(Boolean isActivated) {
     	this.isActivated = isActivated;
+
+    	return this;
 	}
 
 	public Boolean getIsActivated() {    
 		return isActivated;
 	}
 
-	public void setPasswordHash(String passwordHash) {
+	public User setPasswordHash(String passwordHash) {
     	this.passwordHash = passwordHash;
+
+    	return this;
 	}
 
 	public String getPasswordHash() {    
