@@ -8,11 +8,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.cometari.rest.Application;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.http.MediaType;
+import org.springframework.hateoas.MediaTypes;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
@@ -41,7 +40,7 @@ public class ApplicationTest {
         mockMvc.perform(get("/users"))
             .andExpect(status().isOk())
             .andExpect(
-                content().contentType(MediaType.APPLICATION_JSON_VALUE)
+                content().contentType(MediaTypes.HAL_JSON)
             );
     }
     
