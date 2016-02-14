@@ -132,4 +132,26 @@ public class ApplicationTest {
 
         assertNoUsers();
     }
+
+    @Test
+    public void checkEmailValidation() throws Exception {
+        mockMvc.perform(
+                post("/users")
+                    .contentType(MediaType.APPLICATION_JSON_UTF8)
+                    .content("{\"emailAddress\": \"Bilbo\", \"passwordHash\": null}")
+            )
+            .andExpect(status().isUnprocessableEntity());
+    }
+
+    @Test
+    public void checkBadRequest() throws Exception {
+        postExampleUser();
+
+        mockMvc.perform(
+                post("/users")
+                    .contentType(MediaType.APPLICATION_JSON_UTF8)
+                    .content("{\"emailAddress\"")
+            )
+            .andExpect(status().isBadRequest());
+    }
 }
