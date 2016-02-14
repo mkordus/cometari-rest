@@ -2,7 +2,7 @@ package com.cometari.rest.constraints;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
- 
+
 public class EmailValidator implements ConstraintValidator<Email, String> {
 
     @Override

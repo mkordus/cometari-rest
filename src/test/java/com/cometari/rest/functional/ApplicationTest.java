@@ -29,21 +29,21 @@ import org.springframework.web.context.WebApplicationContext;
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
 public class ApplicationTest {
 
-	@Autowired
-	private WebApplicationContext webApplicationContext;
+    @Autowired
+    private WebApplicationContext webApplicationContext;
  
-	private MockMvc mockMvc;
+    private MockMvc mockMvc;
 
-	private final ObjectWriter writer = new ObjectMapper()
-	    .writer()
-	    .withDefaultPrettyPrinter();
+    private final ObjectWriter writer = new ObjectMapper()
+        .writer()
+        .withDefaultPrettyPrinter();
 
-	@Before
-	public void setup() {
-		mockMvc = MockMvcBuilders
-		    .webAppContextSetup(webApplicationContext)
+    @Before
+    public void setup() {
+        mockMvc = MockMvcBuilders
+            .webAppContextSetup(webApplicationContext)
             .build();
-	}
+    }
 
     @Test
     public void checkGetWorks() throws Exception {

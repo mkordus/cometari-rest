@@ -22,23 +22,23 @@ public class User implements Serializable {
     private long id;
 
     @Size(min = 3, max = 80)
-	private String firstName;
+    private String firstName;
 
     @Size(min = 3, max = 80)
-	private String lastName;
+    private String lastName;
 
     @Email
-	@NotNull
-	@Column(unique = true)
-	private String emailAddress;
+    @NotNull
+    @Column(unique = true)
+    private String emailAddress;
 
-	@NotNull
-	private boolean isActivated;
+    @NotNull
+    private boolean isActivated;
 
-	@NotNull
-	private String passwordHash;
+    @NotNull
+    private String passwordHash;
 
-	public User() {}
+    public User() {}
 
     public User(
         String firstName, 
@@ -47,65 +47,65 @@ public class User implements Serializable {
         Boolean isActivated, 
         String passwordHash
     ) { 
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.emailAddress = emailAddress;
-		this.isActivated = isActivated;
-		this.passwordHash = passwordHash;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.emailAddress = emailAddress;
+        this.isActivated = isActivated;
+        this.passwordHash = passwordHash;
     }
 
     public long getId() {
         return this.id;
     }
 
-	public User setFirstName(String firstName) {
-    	this.firstName = firstName;
+    public User setFirstName(String firstName) {
+        this.firstName = firstName;
 
-    	return this;
-	}
+        return this;
+    }
 
-	public String getFirstName() {    
-		return firstName;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public User setLastName(String lastName) {
-    	this.lastName = lastName;
+    public User setLastName(String lastName) {
+        this.lastName = lastName;
 
-    	return this;
-	}
+        return this;
+    }
 
-	public String getLastName() {    
-		return lastName;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public User setEmailAddress(String emailAddress) {
-    	this.emailAddress = emailAddress;
+    public User setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
 
-    	return this;
-	}
+        return this;
+    }
 
-	public String getEmailAddress() {    
-		return emailAddress;
-	}
+    public String getEmailAddress() {
+        return emailAddress;
+    }
 
-	public User setActivated(Boolean isActivated) {
-    	this.isActivated = isActivated;
+    public User setActivated(Boolean isActivated) {
+        this.isActivated = isActivated;
 
-    	return this;
-	}
+        return this;
+    }
 
-	public Boolean getIsActivated() {    
-		return isActivated;
-	}
+    public Boolean getIsActivated() {
+        return isActivated;
+    }
 
-	public User setPasswordHash(String passwordHash) {
-    	this.passwordHash = passwordHash;
+    public User setPasswordHash(String passwordHash) {
+        this.passwordHash = passwordHash;
 
-    	return this;
-	}
+        return this;
+    }
 
-	public String getPasswordHash() {    
-		return passwordHash;
-	}
+    public String getPasswordHash() {
+        return passwordHash;
+    }
 
 }
