@@ -29,6 +29,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("org.springframework.boot:spring-boot-starter-data-rest")
     compile("commons-validator:commons-validator:1.5.0")
+    compile("cz.jirutka.spring:spring-rest-exception-handler:1.1.1")
     testCompile("com.jayway.jsonpath:json-path")
     testCompile("junit:junit:4.12")
     testCompile("org.springframework.boot:spring-boot-starter-test")
